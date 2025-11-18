@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+
+body {
+  /* font-family: var(--font-poppins), sans-serif; */
+  font-family: "Inter var", "Inter", sans-serif;
+  background: #121423;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+@layer utilities {
+
+  .rethink-primary-btn {
+    display: inline-block;
+    color: #ffffff;
+    background-color: #111827;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    padding: 0.7rem 1.2rem;
+    transition: background-color 0.2s;
+  }
+
+  .rethink-primary-btn:hover {
+    background-color: #1f2937;
+    transition: background-color 0.2s;
+  }
+
+  .rethink-secondary-btn {
+    display: inline-block;
+    color: #000000;
+    background-color: #eff6fd;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    padding: 0.7rem 1.2rem;
+    transition: background-color 0.2s;
+  }
+
+  .rethink-secondary-btn:hover {
+    background-color: #dbe3eb;
+    transition: background-color 0.2s;
+  }
+
+  .rethink-blue-btn {
+    display: inline-block;
+    color: #FFF;
+    background-color: #14438B;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    padding: 0.7rem 1.2rem;
+    transition: background-color 0.2s;
+  }
+
+  .rethink-blue-btn:hover {
+     background-color: #2d5da7;
+     transition: background-color 0.2s;
+  }
+
+  .bg-light-section-gradient {
+    background: linear-gradient(to bottom right, #eff6ff, #faf5ff);
+  }
+
+  @keyframes upDown {
+
+    0%,
+    100% {
+      transform: translateY(-10px);
+    }
+
+    50% {
+      transform: translateY(10px);
+    }
+  }
+
+  .animate-up-down {
+    animation: upDown 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  .skeleton-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}

@@ -1,0 +1,81 @@
+table {
+  border-collapse: collapse;
+  margin: 0;
+  overflow: hidden;
+  table-layout: auto;
+  width: 100%;
+  font-size: 14px;
+}
+
+table td,
+table th {
+  box-sizing: border-box;
+  min-width: 1em;
+  padding: 6px 8px;
+  position: relative;
+  vertical-align: top;
+}
+
+table td>*,
+table th>* {
+  margin-bottom: 0;
+}
+
+table tr {
+  border: 1px solid rgba(208, 219, 235, 0.8);
+}
+
+table th {
+  background: hsl(245, 40%, 98%);
+  text-align: left;
+}
+
+table .selectedCell:after {
+  background: rgba(230, 230, 230, 0.575);
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 2;
+}
+table td{
+    min-width: 120px;
+  }
+table .column-resize-handle {
+  bottom: -2px;
+  pointer-events: none;
+  position: absolute;
+  right: -2px;
+  top: 0;
+  width: 4px;
+}
+
+.tableWrapper {
+  margin: 1.5rem 0;
+  overflow-x: auto;
+}
+
+.resize-cursor {
+  cursor: ew-resize;
+  cursor: col-resize;
+}
+@media (max-width:552px){
+  table{
+    font-size: 13px;
+  }
+  table th{
+    font-weight: 600 !important;
+  }
+  table strong{
+    font-weight: 600 !important;
+  }
+  table td{
+    min-width: 100px;
+  }
+  table td:first-child{
+    min-width: 140px;
+  }
+}
